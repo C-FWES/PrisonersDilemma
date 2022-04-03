@@ -1,4 +1,4 @@
-rounds = 100
+rounds = 10
 
 #intialize matchups
 from AlwaysCooperate import always_cooperate
@@ -9,9 +9,9 @@ from RemorsefulProber import remorseful_prober
 from SuspiciousTitForTat import mean_tit_for_tat
 from TitForTat import tit_for_tat
 
-def match_A():
-    a = always_cooperate()
-    b = always_defect()
+def match_A1():
+    a = always_defect()
+    b = always_cooperate()
     r = rounds
     a_memory = []
     b_memory = []
@@ -32,14 +32,12 @@ def match_A():
             a.score += 1
             b.score += 1
         r-=1
-    print("ALWAYS COOPERATE: " + str(a.score))
-    print("ALWAYS DEFECT: " + str(b.score))
+    print("ALWAYS DEFECT: " + str(a.score))
+    print("ALWAYS COOPERATE: " + str(b.score))
     print('------------------------------')
 
-
-
-def match_B():
-    a = always_cooperate()
+def match_B1():
+    a = always_defect()
     b = naive_prober()
     r = rounds
     a_memory = []
@@ -61,14 +59,12 @@ def match_B():
             a.score += 1
             b.score += 1
         r-=1
-    print("ALWAYS COOPERATE: " + str(a.score))
+    print("ALWAYS DEFECT: " + str(a.score))
     print("NAIVE PROBER: " + str(b.score))
     print('------------------------------')
 
-
-
-def match_C():
-    a = always_cooperate()
+def match_C1():
+    a = always_defect()
     b = grudgy()
     r = rounds
     a_memory = []
@@ -90,14 +86,12 @@ def match_C():
             a.score += 1
             b.score += 1
         r-=1
-    print("ALWAYS COOPERATE: " + str(a.score))
+    print("ALWAYS DEFECT: " + str(a.score))
     print("GRUDGER: " + str(b.score))
     print('------------------------------')
 
-
-
-def match_D():
-    a = always_cooperate()
+def match_D1():
+    a = always_defect()
     b = remorseful_prober()
     r = rounds
     a_memory = []
@@ -121,14 +115,12 @@ def match_D():
             a.score += 1
             b.score += 1
         r-=1
-    print("ALWAYS COOPERATE: " + str(a.score))
+    print("ALWAYS DEFECT: " + str(a.score))
     print("REMORSEFUL PROBER: " + str(b.score))
     print('------------------------------')
 
-
-
-def match_E():
-    a = always_cooperate()
+def match_E1():
+    a = always_defect()
     b = mean_tit_for_tat()
     r = rounds
     a_memory = []
@@ -150,14 +142,12 @@ def match_E():
             a.score += 1
             b.score += 1
         r-=1
-    print("ALWAYS COOPERATE: " + str(a.score))
+    print("ALWAYS DEFECT: " + str(a.score))
     print("SUSPICIOUS TIT FOR TAT: " + str(b.score))
     print('------------------------------')
 
-
-
-def match_F():
-    a = always_cooperate()
+def match_F1():
+    a = always_defect()
     b = tit_for_tat()
     r = rounds
     a_memory = []
@@ -179,7 +169,7 @@ def match_F():
             a.score += 1
             b.score += 1
         r-=1
-    print("ALWAYS COOPERATE: " + str(a.score))
+    print("ALWAYS DEFECT: " + str(a.score))
     print("TIT FOR TAT: " + str(b.score))
     print("END OF SET")
     print('------------------------------')

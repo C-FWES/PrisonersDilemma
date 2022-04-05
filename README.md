@@ -1,4 +1,4 @@
-# PrisonersDillema
+# PrisonersDilemma
 A simulation of the Prisoner's Dilemma in Python 3, after I came across the concept while reading *The Selfish Gene* by Richard Dawkins
 
 
